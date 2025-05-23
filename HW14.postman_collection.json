@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "603415f4-d4ea-4712-bf85-7a47ef6eb2a3",
+		"name": "HW14",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36626095"
+	},
+	"item": [
+		{
+			"name": "Add account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"507f1f77bcf86cd799439011\",\n    \"password\":\"pass1234\",\n    \"email\":\"user@email.com\",\n    \"birthday\":\"11.11.22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3500/account/account/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3500/account/account/507f1f77bcf86cd799439011"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3500/account/account/507f1f77bcf86cd799439011"
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"507f1f77bcf86cd799439011\",\n    \"password\":\"frfr4567\",\n    \"email\":\"user1@email.com\",\n    \"birthday\":\"11.11.22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3500/account/account/"
+			},
+			"response": []
+		}
+	]
+}
