@@ -23,8 +23,8 @@ export const pickUpBookSchema = Joi.object({
 })
 
 export const readerAccountSchema = Joi.object({
-    userName:Joi.string().length(50).required(),
+    userName:Joi.string().min(5).max(50).required(),
     password:Joi.string().min(8).required(),
     email:Joi.string().email().required(),
-    birthday:Joi.string().length(9).min(9).required()
+    birthday: Joi.string().length(8).pattern(/^\d{2}\.\d{2}\.\d{2}$/).required()
 })

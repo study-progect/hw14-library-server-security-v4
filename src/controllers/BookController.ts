@@ -1,11 +1,11 @@
 import {LibraryServiceImplEmbedded} from "../service/LibraryServiceImplEmbedded.js";
 import {LibraryService} from "../service/LibraryService.js";
 import {BookDto} from "../model/BookDto.js";
-import {Book, Reader} from "../model/Book.js";
+import {Book} from "../model/Book.js";
 import {
     convertBookDtoToBook,
     convertBookToBookDto,
-    getGenre, getOrCreateReader,
+    getGenre,
     getStatus
 } from "../utils/tools.js";
 import {LibraryServiceImplMongo} from "../service/LibraryServiceImplMongo.js";
@@ -44,10 +44,10 @@ export class BookController {
     //    await this.libService.returnBook(id, reader)
     // }
 
-    async returnBook(id: string, dto: ReaderDto) {
-        const reader = await getOrCreateReader(dto);
-        await this.libService.returnBook(id, reader)
-    }
+    // async returnBook(id: string, dto: ReaderDto) {
+    //     const reader = await getOrCreateReader(dto);
+    //     await this.libService.returnBook(id, reader)
+    // }
 
     async getBooksByGenre(genre: string) {
         const gen = getGenre(genre);

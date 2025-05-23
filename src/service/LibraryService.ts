@@ -1,4 +1,5 @@
-import {Book, BookGenres, Reader} from "../model/Book.js";
+import {Book, BookGenres} from "../model/Book.js";
+import {Reader} from "../model/Reader.js";
 
 export interface LibraryService {
      addBook: (book:Book) => Promise<boolean>;

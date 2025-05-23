@@ -10,7 +10,19 @@ export class AccountController {
     private service:AccountService = new AccountServiceImplMongo()
 
     async addReaderAccount(dto: ReaderDto) {
-    const reader:Reader = convertReaderDtoToReader(dto)
-    await this.service.addAccount(reader)
+        const reader: Reader = convertReaderDtoToReader(dto)
+        await this.service.addAccount(reader)
+    }
+    async getReaderAccount(userName:string) {
+        return await this.service.getAccount(userName)
+    }
+
+    async updateReaderAccount(dto: ReaderDto) {
+        const reader:Reader = convertReaderDtoToReader(dto)
+        return await this.service.updateAccount(reader)
+    }
+
+    async removeReaderAccount(userName:string) {
+        return await this.service.removeAccount(userName)
     }
 }

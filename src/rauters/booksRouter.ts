@@ -1,7 +1,7 @@
 import express from "express";
 import {BookController} from "../controllers/BookController.js";
 import asyncHandler from "express-async-handler";
-import {Book, Reader} from "../model/Book.js";
+import {Book} from "../model/Book.js";
 import {bookDtoSchema, bookIdSchema, readerSchema} from "../utils/joiSchemas.js";
 import {BookDto} from "../model/BookDto.js";
 import {getGenre} from "../utils/tools.js";
